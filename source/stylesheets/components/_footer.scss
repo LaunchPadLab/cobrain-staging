@@ -1,0 +1,35 @@
+/*-----------------------
+Footer
+-----------------------*/
+.footer-container {
+  clear: both;
+  @include rem(padding, 5px 20px);
+  text-align: center;
+
+  p{
+    color: $grey-light;
+    @include s-tiny;
+    @include rem(margin-top, 20px);
+  }
+}
+
+.footer-links{
+  @include s-small;
+
+  li{
+    display: inline-block;
+    @include rem(margin, 10px 10px 0px);
+
+    @include media($tablet){
+      @include rem(margin-top, 0px);
+    }
+
+    a{
+      color: $grey-light;
+
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+  }
+}

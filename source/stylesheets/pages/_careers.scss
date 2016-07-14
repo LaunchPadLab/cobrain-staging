@@ -1,0 +1,113 @@
+.grey-wrapper{
+  background-color: $white-light;
+}
+
+.career-header{
+  background-color: $purple-base;
+}
+
+/*-----------------------
+Company Description/Perks
+-----------------------*/
+.career-container{
+  .text-block{
+    @include media($tablet){
+      @include span-columns(6.5 of 12);
+    }
+  }
+
+  aside{
+    @include media($tablet){
+      border-top: 3px solid $purple-base;
+    }
+
+    li{
+      @include rem(margin-top, 5px);
+      &:before{
+        content:"";
+        display: inline-block;
+        @include triangle(12px, $purple-base, right);
+        @include rem(margin-right, 10px);
+        vertical-align: top;
+      }
+
+      span{
+        display: inline-block;
+        @include rem(margin-top, -3px);
+        overflow: hidden;
+        width: calc(100% - 23px);
+      }
+    }
+  }
+}
+
+.block-header{
+  text-align: center;
+}
+
+/*-----------------------
+Job Listings
+-----------------------*/
+.career-listings{
+
+  .center-header {
+    h2, p { color: $black-base; }
+  }
+
+  .listing{
+    background-color: $white-base;
+    border-top: 3px solid $yellow-base;
+    @include boxed-content;
+
+
+    &:first-child{
+      @include rem(margin-top, 0px);
+    }
+
+    @include media($tablet){
+      @include shift(2);
+      @include span-columns(8 of 12);
+    }
+
+    h5{
+      @include rem(margin-top, 30px);
+    }
+
+    li{
+      list-style: disc;
+      @include rem(margin-left, 20px);
+    }
+
+    .button-yellow-base{
+      @include rem(margin-top, 30px);
+      width: 200px;
+    }
+  }
+}
+
+//Accoridion
+.accordion {
+  .submenu {
+    display: none;
+  }
+
+  .js-accordion-trigger{
+    &:before{
+      content: "+ Read More";
+    }
+
+    &:hover{
+      color: $yellow-base;
+    }
+  }
+
+  .is-expanded {
+    display: block;
+
+    .js-accordion-trigger{
+      &:before{
+        content: "– Read Less";
+      }
+    }
+  }
+}

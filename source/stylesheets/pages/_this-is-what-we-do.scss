@@ -1,0 +1,96 @@
+/*-----------------------
+This is What We Do Header
+-----------------------*/
+.what-we-do-header{
+  background: $white-light url('../../images/holding-shopping-bags.jpg') no-repeat center;
+  background-size: cover;
+
+  &:after{
+    background-color: $yellow-base;
+    opacity: 0.9;
+
+    @include media($tablet){
+      display: none;
+    }
+  }
+}
+
+
+/*-----------------------
+Icons
+-----------------------*/
+.what-we-do-container{
+  text-align: center;
+
+  h2{
+    @include center;
+    max-width: 400px;
+
+    @include media($tablet){
+      max-width: 800px;
+    }
+  }
+
+  li{
+    @include center;
+    @include rem(margin-top, 30px);
+    max-width: 400px;
+
+    @include media($tablet){
+      @include span-columns(4 of 12);
+    }
+  }
+
+  blockquote{
+    color: $yellow-base;
+    display: inline-block;
+    @include rem(margin-top, 50px);
+    position: relative;
+
+    &:after{
+      content: "";
+      @include rem(margin-top, 5px);
+      @include triangle(100px 70px, #FFCB42, down);
+      @include vertical-horizontal-center;
+      opacity: 0.1;
+      z-index: -1;
+    }
+  }
+}
+
+/*-----------------------
+API
+-----------------------*/
+.api-wrapper{
+  .image-block{
+    background: $white-light url('../../images/app.jpg') no-repeat center;
+    background-size: cover;
+
+    @include media($tablet){
+      @include position(absolute, null null null 0px);
+    }
+  }
+
+  .split-block{
+    @include media($tablet){
+     @include rem(padding,100px 0px);
+      margin-left: 50%;
+    }
+  }
+}
+
+/*-----------------------
+Partner Callout
+-----------------------*/
+.partner-callout-wrapper{
+  background: $white-light url('../../images/girls-shopping.jpg') no-repeat center 25%;
+  background-size: cover;
+}
+
+.partner-callout-container{
+  text-align: center;
+  max-width: 800px;
+
+  h2, p{ color: $white-base; }
+}
+

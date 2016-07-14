@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "WHI Real Estate Partners" %></title>
+    <%= favicon_tag 'images/favicon.png' %>
+    <script src="https://use.typekit.net/lwg1lsu.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <%= stylesheet_link_tag :application %>
+  </head>
+
+  <body class="<%= page_classes %>">
+  <div class="sticky-nav">
+    <%= partial 'partials/navigation' %>
+    <%= yield %>
+    <%= partial 'partials/footer' %>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag "owl.carousel.min" %>
+    <%= javascript_include_tag "modernizr.min" %>
+    <%= javascript_include_tag "classie" %>
+    <%= javascript_include_tag "photostack" %>
+    <%= javascript_include_tag "pagination" %>
+
+    <script>
+        // [].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
+
+        new Photostack( document.getElementById( 'photostack-3' ), {
+            callback : function( item ) {
+                //console.log(item)
+            }
+        } );
+    </script>
+  </body>
+</html>
