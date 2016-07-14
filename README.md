@@ -1,2 +1,5 @@
-# corp-site
-Corporate website
+# Corporate website
+
+# Deploy to GitHub Pages
+
+    rake build
