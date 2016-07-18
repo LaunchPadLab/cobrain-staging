@@ -37,55 +37,56 @@ figure{
 
 /* The size of this wrapper can be smaller if the items should not be scattered across the whole container */
 .photostack > div {
-  width: 100%;
   height: 100%;
   margin: 0 auto;
+  width: 100%;
 }
 
 .photostack figure {
-  width: 320px;
-  height: 360px;
-  position: relative;
+  background: $white-base;
   display: inline-block;
-  background: #fff;
   padding: 40px;
+  position: relative;
   text-align: center;
   margin: 5px;
+  width: 340px;
 }
 
 .js .photostack figure {
-  position: absolute;
   display: block;
   margin: 0;
+  position: absolute;
 }
 
 .photostack figcaption h2 {
+  color: $grey-base;
+  @include s-medium;
   margin: 20px 0 0 0;
-  color: #a7a0a2;
-  font-size: 16px;
+}
+
+figcaption p{
+  @include s-small;
 }
 
 .photostack-img {
-  outline: none;
-  display: block;
-  width: 240px;
-  height: 240px;
   background: #f9f9f9;
+  display: block;
+  height: 260px;
+  outline: none;
+  width: 260px;
 }
 
 .photostack-back {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
+  background: $white-base;
   color: #a7a0a2;
+  display: none;
+  font-size: 22px;
+  height: 100%;
+  @include position(absolute, 0px null null 0px);
+  line-height: 1.25;
   padding: 50px 40px;
   text-align: left;
-  font-size: 22px;
-  line-height: 1.25;
+  width: 100%;
   z-index: 1;
 }
 
@@ -100,10 +101,10 @@ figure{
 /* Navigation dots */
 .photostack nav {
   @include position(absolute, null null 30px 0px);
+  @include transition(opacity 0.3s);
+  text-align: center;
   width: 100%;
   z-index: 90;
-  text-align: center;
-  @include transition(opacity 0.3s);
 }
 
 .photostack-start nav {
@@ -111,17 +112,17 @@ figure{
 }
 
 .photostack nav span {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
   background: #aaa;
   border-radius: 50%;
-  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
   @include transition(transform 0.6s ease-in-out, background 0.3s);
   @include transform(scale(0.48));
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  width: 30px;
 }
 
 .photostack nav span:last-child {
@@ -129,39 +130,31 @@ figure{
 }
 
 .photostack nav span::after {
-  content: "";
   background: url('../../images/flip.svg') no-repeat center;
+  content: "";
   display: inline-block;
   height: 14px;
+  @include backface-visibility(hidden);
+  @include transition(opacity 0.3s);
+  opacity: 0;
   width: 14px;
   vertical-align: -8px;
-  opacity: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .photostack nav span.current {
-  background: #888;
+  background: $grey-base;
   @include transform(scale(1));
 }
 
 .photostack nav span.current.flip {
+  background: $grey-base;
   @include transform(scale(1) rotateY(-180deg) translateZ(-1px));
-  background: #555;
 }
 
 .photostack nav span.flippable::after {
+  @include transition-delay(0.4s);
   opacity: 1;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
 }
-
-
-
 
 /* Hide figure overlay when it becomes current */
 figure.photostack-current::after {
@@ -176,30 +169,25 @@ figure.photostack-current::after {
 }
 
 .photostack-perspective {
-  -webkit-perspective: 1800px;
-  perspective: 1800px;
+  @include perspective(1800px);
 }
 
 .photostack-perspective > div,
 .photostack-perspective figure {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  @include transform-style(preserve-3d);
 }
 
 .photostack-perspective figure,
 .photostack-perspective figure div {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  @include backface-visibility(hidden);
 }
 
 .photostack-perspective figure.photostack-flip {
-  -webkit-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
+  @include transform-origin(0% 50%);
 }
 
 .csstransformspreserve3d figure.photostack-flip .photostack-back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  @include transform(rotateY(180deg));
   display: block;
 }
 
