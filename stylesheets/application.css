@@ -3164,93 +3164,95 @@ figure {
 /* The size of this wrapper can be smaller if the items should not be scattered across the whole container */
 /* line 39, pages/_about.scss */
 .photostack > div {
-  width: 100%;
   height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 /* line 45, pages/_about.scss */
 .photostack figure {
-  width: 320px;
-  height: 360px;
-  position: relative;
+  background: #FFFFFF;
   display: inline-block;
-  background: #fff;
   padding: 40px;
+  position: relative;
   text-align: center;
-  margin: 5px; }
+  margin: 5px;
+  width: 340px; }
 
-/* line 56, pages/_about.scss */
+/* line 55, pages/_about.scss */
 .js .photostack figure {
-  position: absolute;
   display: block;
-  margin: 0; }
+  margin: 0;
+  position: absolute; }
 
-/* line 62, pages/_about.scss */
+/* line 61, pages/_about.scss */
 .photostack figcaption h2 {
-  margin: 20px 0 0 0;
-  color: #a7a0a2;
-  font-size: 16px; }
+  color: #9B9B9B;
+  font-size: 15px;
+  font-size: 1.07143rem;
+  line-height: normal;
+  margin: 20px 0 0 0; }
 
-/* line 68, pages/_about.scss */
+/* line 67, pages/_about.scss */
+figcaption p {
+  font-size: 12px;
+  font-size: 0.85714rem; }
+
+/* line 71, pages/_about.scss */
 .photostack-img {
-  outline: none;
+  background: #f9f9f9;
   display: block;
-  width: 240px;
-  height: 240px;
-  background: #f9f9f9; }
+  height: 260px;
+  outline: none;
+  width: 260px; }
 
-/* line 76, pages/_about.scss */
+/* line 79, pages/_about.scss */
 .photostack-back {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
+  background: #FFFFFF;
   color: #a7a0a2;
+  display: none;
+  font-size: 22px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 1.25;
   padding: 50px 40px;
   text-align: left;
-  font-size: 22px;
-  line-height: 1.25;
+  width: 100%;
   z-index: 1; }
 
-/* line 92, pages/_about.scss */
+/* line 93, pages/_about.scss */
 .photostack-back p {
   margin: 0; }
 
-/* line 96, pages/_about.scss */
+/* line 97, pages/_about.scss */
 .photostack-back p span {
   text-decoration: line-through; }
 
 /* Navigation dots */
-/* line 101, pages/_about.scss */
+/* line 102, pages/_about.scss */
 .photostack nav {
   position: absolute;
   bottom: 30px;
   left: 0px;
-  width: 100%;
-  z-index: 90;
-  text-align: center;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
-  transition: opacity 0.3s; }
+  transition: opacity 0.3s;
+  text-align: center;
+  width: 100%;
+  z-index: 90; }
 
-/* line 109, pages/_about.scss */
+/* line 110, pages/_about.scss */
 .photostack-start nav {
   opacity: 0; }
 
-/* line 113, pages/_about.scss */
+/* line 114, pages/_about.scss */
 .photostack nav span {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
   background: #aaa;
   border-radius: 50%;
-  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
   -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
   -moz-transition: -moz-transform 0.6s ease-in-out, background 0.3s;
   transition: transform 0.6s ease-in-out, background 0.3s;
@@ -3258,54 +3260,58 @@ figure {
   -moz-transform: scale(0.48);
   -ms-transform: scale(0.48);
   -o-transform: scale(0.48);
-  transform: scale(0.48); }
+  transform: scale(0.48);
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  width: 30px; }
 
-/* line 127, pages/_about.scss */
+/* line 128, pages/_about.scss */
 .photostack nav span:last-child {
   margin-right: 0; }
 
-/* line 131, pages/_about.scss */
+/* line 132, pages/_about.scss */
 .photostack nav span::after {
-  content: "";
   background: url("../../images/flip.svg") no-repeat center;
+  content: "";
   display: inline-block;
   height: 14px;
-  width: 14px;
-  vertical-align: -8px;
-  opacity: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  width: 14px;
+  vertical-align: -8px; }
 
-/* line 147, pages/_about.scss */
+/* line 144, pages/_about.scss */
 .photostack nav span.current {
-  background: #888;
+  background: #9B9B9B;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1); }
 
-/* line 152, pages/_about.scss */
+/* line 149, pages/_about.scss */
 .photostack nav span.current.flip {
+  background: #9B9B9B;
   -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
   -moz-transform: scale(1) rotateY(-180deg) translateZ(-1px);
   -ms-transform: scale(1) rotateY(-180deg) translateZ(-1px);
   -o-transform: scale(1) rotateY(-180deg) translateZ(-1px);
-  transform: scale(1) rotateY(-180deg) translateZ(-1px);
-  background: #555; }
+  transform: scale(1) rotateY(-180deg) translateZ(-1px); }
 
-/* line 157, pages/_about.scss */
+/* line 154, pages/_about.scss */
 .photostack nav span.flippable::after {
-  opacity: 1;
   -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s; }
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  opacity: 1; }
 
 /* Hide figure overlay when it becomes current */
-/* line 167, pages/_about.scss */
+/* line 160, pages/_about.scss */
 figure.photostack-current::after {
   -webkit-transition: opacity 0.6s, visibility 0s 0.6s;
   -moz-transition: opacity 0.6s, visibility 0s 0.6s;
@@ -3314,59 +3320,69 @@ figure.photostack-current::after {
   visibility: hidden; }
 
 /* Special classes for transitions and perspective */
-/* line 174, pages/_about.scss */
+/* line 167, pages/_about.scss */
 .photostack-transition figure {
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   -moz-transition: -moz-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out; }
 
-/* line 178, pages/_about.scss */
+/* line 171, pages/_about.scss */
 .photostack-perspective {
   -webkit-perspective: 1800px;
+  -moz-perspective: 1800px;
   perspective: 1800px; }
 
-/* line 183, pages/_about.scss */
+/* line 175, pages/_about.scss */
 .photostack-perspective > div,
 .photostack-perspective figure {
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/* line 189, pages/_about.scss */
+/* line 180, pages/_about.scss */
 .photostack-perspective figure,
 .photostack-perspective figure div {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-/* line 195, pages/_about.scss */
+/* line 185, pages/_about.scss */
 .photostack-perspective figure.photostack-flip {
   -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
   transform-origin: 0% 50%; }
 
-/* line 200, pages/_about.scss */
+/* line 189, pages/_about.scss */
 .csstransformspreserve3d figure.photostack-flip .photostack-back {
   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
   display: block; }
 
-/* line 206, pages/_about.scss */
+/* line 194, pages/_about.scss */
 .no-csstransformspreserve3d figure.photostack-showback .photostack-back {
   display: block; }
 
 /* The no-JS fallback look does not need to be boring ;) */
-/* line 211, pages/_about.scss */
+/* line 199, pages/_about.scss */
 .no-js .photostack figure {
   box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.05); }
-  /* line 214, pages/_about.scss */
+  /* line 202, pages/_about.scss */
   .no-js .photostack figure:after {
     display: none; }
-  /* line 216, pages/_about.scss */
+  /* line 204, pages/_about.scss */
   .no-js .photostack figure:nth-child(3n) {
     -webkit-transform: translateX(-10%) rotate(5deg);
     -moz-transform: translateX(-10%) rotate(5deg);
     -ms-transform: translateX(-10%) rotate(5deg);
     -o-transform: translateX(-10%) rotate(5deg);
     transform: translateX(-10%) rotate(5deg); }
-  /* line 220, pages/_about.scss */
+  /* line 208, pages/_about.scss */
   .no-js .photostack figure:nth-child(3n-2) {
     -webkit-transform: translateY(10%) rotate(-3deg);
     -moz-transform: translateY(10%) rotate(-3deg);
@@ -3374,7 +3390,7 @@ figure.photostack-current::after {
     -o-transform: translateY(10%) rotate(-3deg);
     transform: translateY(10%) rotate(-3deg); }
 
-/* line 225, pages/_about.scss */
+/* line 213, pages/_about.scss */
 .photostack-title span {
   font-weight: 300;
   font-size: 12px;
@@ -3383,7 +3399,7 @@ figure.photostack-current::after {
 /*-----------------------
 Career Callout
 -----------------------*/
-/* line 233, pages/_about.scss */
+/* line 221, pages/_about.scss */
 .career-wrapper {
   background: #FAFAFA url("../../images/career-callout.jpg") no-repeat center;
   background-size: cover; }
